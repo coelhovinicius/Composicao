@@ -1,4 +1,4 @@
-﻿/* >>> ENUM EMPLOYEELEVEL <<< */
+﻿/* >>> ENUM EMPLOYEELEVEL (DENTRO DA PASTA ENUMS) <<< */
 
 namespace Aulas119a121_Composicao_Ex1.Entities.Enums
 {

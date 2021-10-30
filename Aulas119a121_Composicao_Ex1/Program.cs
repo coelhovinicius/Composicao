@@ -30,7 +30,7 @@
    (criar as pastas das pontas primeiro):
     > Classe Department;
     > Classe HourContract;
-    > Classe Worker - ela dependera da pasta "Enums";
+    > Classe Employee - ela dependera da pasta "Enums";
     > Criar a pasta "Enums" dentro da pasta "Entities";
         - Dentro da pasta "Enums", criar o Tipo ENUM de nome "EmployeeLevel" (lembrar de alterar de "class"
           para "enum";

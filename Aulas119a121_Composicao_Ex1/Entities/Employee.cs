@@ -1,4 +1,4 @@
-﻿/* >>> CLASSE EMPLOYEE <<< */
+﻿/* >>> CLASSE EMPLOYEE (PASTA ENTITIES) <<< */
 
 using System.Collections.Generic; // Namespace da classe LIST
 using Aulas119a121_Composicao_Ex1.Entities.Enums; /* Necessario para ter acesso ao namespace da classe ENUM

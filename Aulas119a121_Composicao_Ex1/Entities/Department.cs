@@ -1,4 +1,4 @@
-﻿/* >>> CLASSE DEPARTMENT (PASTA ENTIDADES) <<< */
+﻿/* >>> CLASSE DEPARTMENT (PASTA ENTITIES) <<< */
 
 namespace Aulas119a121_Composicao_Ex1.Entities
 {

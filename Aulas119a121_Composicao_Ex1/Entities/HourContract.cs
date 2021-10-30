@@ -1,4 +1,4 @@
-﻿/* >>> CLASSE HOURCONTRACT <<< */
+﻿/* >>> CLASSE HOURCONTRACT (PASTA ENTITIES) <<< */
 
 using System;
 
