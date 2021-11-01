@@ -53,10 +53,10 @@ namespace Aulas119a121_Composicao_Ex1
         static void Main(string[] args)
         {
             Console.Write("Enter department name: ");
-            string deptName = Console.ReadLine();
+            string deptName = Console.ReadLine(); // Variavel temporaria
             Console.WriteLine("Enter employee data:");
             Console.Write("Name: ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine(); // Variavel temporaria
             Console.Write("Level (Junior / MidLevel / Senior): ");
             EmployeeLevel level = Enum.Parse<EmployeeLevel>(Console.ReadLine()); /* Converte a string digitada para tipo
                                                                                   * EmployeeLevel, converte para tipo
@@ -67,16 +67,20 @@ namespace Aulas119a121_Composicao_Ex1
             double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Department dept = new Department(deptName); // Instancia o objeto Department
-            Employee employee = new Employee(name, level, baseSalary, dept); // Instancia o objeto Employee
+            Employee employee = new Employee(name, level, baseSalary, dept); /* Instancia o objeto de nome "employee", do 
+                                                                              * tipo Employee, recebendo os valores 
+                                                                              * em parenteses (digitados) como parametros
+                                                                              * (argumentos) */
 
             Console.Write("How many contracts for this employee? ");
             int n = int.Parse(Console.ReadLine()); // Entra com o numero de contratos a serem atribuidos ao Employee
 
-            for (int i = 1; i <= n; i++) // Adicionando contratos
+            for (int i = 1; i <= n; i++) // Adiciona o numero de contratos indicado ("n")
             {
                 Console.WriteLine($"Enter contract #{i} data:"); // Chama o "i" por Interpolacao
                 Console.Write("Date (DD/MM/YYYY): ");
-                DateTime date = DateTime.Parse(Console.ReadLine()); // Le os dados digitados
+                DateTime date = DateTime.Parse(Console.ReadLine()); /* Variavel temporaria "date" tipo DateTime que recebe
+                                                                     * o valor digitado */
                 Console.Write("Value per hour: ");
                 double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); // Le os dados
                 Console.Write("Duration (hours): ");
@@ -85,7 +89,7 @@ namespace Aulas119a121_Composicao_Ex1
                                                                                       * do tipo "HourContract", e
                                                                                       * instancia com os argumentos
                                                                                       * entre parenteses */
-                employee.AddContract(contract); // Adiciona a lista de contratos ao Employee
+                employee.AddContract(contract); // Adiciona "contract" ao"employee"
             }
 
             Console.WriteLine();
@@ -96,8 +100,12 @@ namespace Aulas119a121_Composicao_Ex1
             int month = int.Parse(monthAndYear.Substring(0, 2)); // Recorta dois caracteres da string, a partir da posicao 0
             int year = int.Parse(monthAndYear.Substring(3)); // Recorta os caracteres a partir da posicao 3 da string
             Console.WriteLine("Name: " + employee.Name);
-            Console.WriteLine("Department: " + employee.Department.Name);
+            Console.WriteLine("Department: " + employee.Department.Name); /* A partir do objeto "employee", tipo Employee, 
+                                                                           * acessamos a propriedade Department e, a partir
+                                                                           * partir desta, acessamos o "Name" de Department */  
             Console.WriteLine("Income for " + monthAndYear + ": " + employee.Income(year, month).ToString("F2", CultureInfo.InvariantCulture));
+            /* "employee.Income(year, month)" - Recebe os parametros entre "year" e "month" e atribui a operacao "Income", 
+             * da variavel "employee", do tipo Employee". */
         }
     }
 }
